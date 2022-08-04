@@ -126,7 +126,7 @@ def findInterestingStrings(strings):
 
         url = re.search(".*\.(com|net|org|de|icu|uk|ru|info|top|xyz|tk|cn|ga|cf|nl|live|buzz).*", string)
         ip = re.search(".*\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*", string)
-        path = re.search(".*:\\.*", string)
+        path = re.search(".*:\\\S.*", string)
 
         if url != None:
             print (interestingStrings.append(url.string))
