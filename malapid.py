@@ -16,7 +16,6 @@ def main():
     parser.add_argument("-o", "--out-file", help="Save the output to a file")
     parser.add_argument("file", help="Input PE file to get strings data or text file with strings data already in it")
     args = vars(parser.parse_args()) # convert to dictionary
-    print(args)
 
     strings = getStrings(args["file"])
 
